@@ -100,7 +100,7 @@ module Ramaze
       end
     end
 
-    # Copied from actionpack, and revised by insane-dreamer to fix a bug (original fails
+    # Copied from actionpack, and revised by insane-dreamer to fix a bug (original fails on some URLs)
     AUTO_LINK_RE = %r{
       (                          # leading text
         <\w+.*?>|                # leading HTML tag, or
@@ -121,7 +121,7 @@ module Ramaze
       )
       ([[:punct:]]|<|$|)         # trailing text
     }x unless defined? AUTO_LINK_RE
-    
+
     # Turns all urls into clickable links.  If a block is given, each url
     # is yielded and the result is used as the link text.
     def auto_link(text, opts = {})
