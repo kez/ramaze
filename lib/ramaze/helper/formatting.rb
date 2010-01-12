@@ -100,7 +100,7 @@ module Ramaze
       end
     end
 
-    # copied from actionpack, and revised by insane-dreamer to fix a bug
+    # Copied from actionpack, and revised by insane-dreamer to fix a bug (original fails
     AUTO_LINK_RE = %r{
       (                          # leading text
         <\w+.*?>|                # leading HTML tag, or
